@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/main.css"/>
+
+</head>
+<header class="header">
+<a href="#" class="active"><img src="/image/logo.png"alt="Logo" style="width:11.7% height=11.7%"></a>
+
+<h1>My Career Center</h1><br>
+</header>
+<body>
+    <div>
+        <nav class="navigation">
+            <a href="/">Home</a>
+			<a href="/admin">Admin</a>
+			<!-- <a href="/home">Students</a> -->
+			<a href="/student/login">Students</a>
+			<!-- <a href="/employer">Employers</a> -->
+			<a href="/employer/login">Employers</a>
+            
+        </nav>
+        <br><br>
+        </div>
+        <div>
+            <table id="customers" >
+                <tr>
+                    <th>ID</th>
+                    <th> Company Name</th>
+                    <th>Title</th>
+                    <th>Application Procedure</th>
+                    <th>Documents Required</th>
+                    <th>Description</th>
+                    <th>Job Type</th>
+                    <th>Number of position</th>
+                    <th>Salary</th>
+                    <th>Targeted Programs</th>
+                    <th>Location</th>
+                    <th></th>
+                    
+        
+                </tr>
+                <%for(i=0;i<myjobs.length;i++){%>
+                    <form action="/apply/job" method="POST">
+                    <tr>
+                        <td><strong><%=myjobs[i].id%></strong>&nbsp;</td>
+                        <td><span><%=myjobs[i].company_name%></span>&nbsp;</td>
+                        <td><span><%=myjobs[i].title%></span>&nbsp;</td>
+                        <td><span><%=myjobs[i].application_procedure%></span>&nbsp;</td>
+                        <td><span><%=myjobs[i].doc_required%></span>&nbsp;</td>
+                        <td><span><%=myjobs[i].desc%></span>&nbsp;</td>
+                        <td><span><%=myjobs[i].job_type%></span>&nbsp;</td>
+                        <td><span><%=myjobs[i].no_of_position%></span>&nbsp;</td>
+                        <td><span><%=myjobs[i].salary%></span>&nbsp;</td>
+                        <td><span><%=myjobs[i].targeted_pgms%></span>&nbsp;</td>
+                        <td><span><%=myjobs[i].location%></span>&nbsp;</td>
+                        <td>
+                            <button type="submit" class="btn btn-primary">Apply</button>
+    
+                        </td>  
+                    </tr>
+                </form>
+                    <%}%>
+            </table>
+        </div><br><br>
+    
+</body>
+    
+</html>

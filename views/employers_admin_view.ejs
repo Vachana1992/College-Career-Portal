@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/main.css"/>
+</head>
+<header class="header">
+<a href="#" class="active"><img src="/image/logo.png"alt="Logo" style="width:11.7% height=11.7%"></a>
+
+<h1>My Career Center</h1><br>
+</header>
+<body>	
+	
+	<div>
+		<nav class="navigation">
+			<a href="/">Home</a>
+			<a href="/admin">Admin</a>
+			<!-- <a href="/home">Students</a> -->
+			<a href="/student/login">Students</a>
+			<!-- <a href="/employer">Employers</a> -->
+			<a href="/employer/login">Employers</a>
+			
+		</nav>
+	<br><br>
+	</div>
+    <div id='login'>
+        <h2 data-position="header">Student Details</h2>
+        <section data-position="students">
+            <table>
+                <th>
+                    <tr>
+                    <td><strong>Employer Id  </strong></td>
+                    <td><strong>Name  </strong></td>
+                    <td><strong>Career Advisor   </strong></td>
+                    <td><strong>Address      </strong></td>
+                    <td><strong>City    </strong></td>
+                    <td><strong>Province</strong></td>
+                    <td><strong>Zip Code     </strong></td>
+                    <td><strong>Phone       </strong></td>
+                    <td><strong>Email       </strong></td>
+                </tr>
+                </th>
+                
+            <% for(var i=0;i<myemployers.length;i++){ %>
+                <tr>
+                    <td>
+                        <%=myemployers[i].employer_id %>&nbsp;
+                    </td>
+                    <td>
+                        <%=myemployers[i].name %>&nbsp;
+                    </td>
+                    <td>
+                        <%=myemployers[i].career_advisor %>&nbsp;
+                    </td>
+                    <td>
+                        <%=myemployers[i].address %>&nbsp;
+                    </td>
+                    <td>
+                        <%=myemployers[i].city %>&nbsp;
+                    </td>
+                    <td>
+                        <%=myemployers[i].province %>&nbsp;
+                    </td>
+                    <td>
+                        <%=myemployers[i].zip_code %>&nbsp;
+                    </td>
+                    <td>
+                        <%=myemployers[i].phone %>&nbsp;
+                    </td>
+                    <td>
+                        <%=myemployers[i].employer_email %>&nbsp;
+                    </td>
+                        <td>
+                            <form action='/delete/employer?id=<%=myemployers[i].employer_id %>' method="POST">
+                                <input type="submit" value="Delete Employer"></button>
+                            </form>
+                        </td>
+                    </tr>
+                    <%} %>
+            </table>
+    
+        </section>
+    </div>
+        
+</body>
+<section>
+</section>
+<footer>
+	<nav class="footer">
+		<a href="">Help and Support</a>
+		<a href="faq.html">FAQ's</a>
+		<a href="AboutUs.html">About Us</a>
+	</nav>
+</footer>
+</html>

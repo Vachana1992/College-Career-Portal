@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/main.css"/>
+</head>
+<header class="header">
+<a href="#" class="active"><img src="/image/logo.png"alt="Logo" style="width:11.7% height=11.7%"></a>
+
+<h1>My Career Center</h1><br>
+</header>
+<body>
+
+		
+	
+	<div>
+        <nav class="navigation">
+			<a href="/">Home</a>
+			<a href="/admin">Admin</a>
+			<!-- <a href="/home">Students</a> -->
+			<a href="/student/login">Students</a>
+			<!-- <a href="/employer">Employers</a> -->
+			<a href="/employer/login">Employers</a>
+			
+		</nav>
+	<br><br>
+	</div>
+
+   
+      
+        
+           <h2 class="h2b">Edit Admin Details </h3>
+           
+                <form >
+                    <table id="customers">
+                        <tr>
+                <td> Id:</td><td><input type ="text" id="ad_id" name="ad_id"  value=<%=old_id%> </td>
+               
+            </tr>
+            </table><br>
+
+            <h2>Update Details</h2><br>
+
+            <table>
+            <tr>
+                <td> Name:</td><td><input type ="text" id="ad_name" name="ad_name" placeholder="Enter admin name"/> </td>
+            </tr>
+            <tr>
+                <td>Email:</td><td><input type ="text" id="ad_email" name="ad_email" placeholder="Enter new email"/> </td>
+            </tr>
+            <tr>
+                <td> Phone:</td><td><input type ="text" id="ad_phone" name="ad_phone" placeholder="Enter new phone"/> </td>
+            </tr>
+            <tr>
+                <td> Username:</td><td><input type ="text" id="ad_username" name="ad_username" placeholder="Enter new username"/> </td>
+            </tr>
+            <tr>
+                <td> Password:</td><td><input type ="text" id="ad_pwd" name="ad_pwd" placeholder="Enter new password"/> </td>
+            </tr>
+           
+    
+            
+        </table>    
+        <button class="addbtn" type="button" id="edit_adbutton" name="edit_adbutton">Edit</button> 
+            </form>
+              
+           
+    
+    </body>
+    <script>
+        function myFunction() {
+          alert("Successfully Added");
+        }
+
+        </script>
+        <script src = '/edit_admin.js'></script>
+
+          
+       
+     
+       
+</body>
+<section>
+</section>
+<footer>
+	<nav class="footer">
+		<a href="">Help and Support</a>
+		<a href="faq.html">FAQ's</a>
+		<a href="AboutUs.html">About Us</a>
+	</nav>
+</footer>

@@ -1,0 +1,38 @@
+<html>
+    <head><link rel="stylesheet" href="/main.css"/></head>
+    <header class="header">
+        <a href="#" class="active"><img src="/image/logo.png"alt="Logo" style="width:11.7% height=11.7%"></a>
+        
+        <h1>My Career Center</h1><br>
+        </header>
+    
+    <body>
+        <div>
+            <nav class="navigation">
+                <a href="/">Home</a>
+                <a href="/admin">Admin</a>
+                <!-- <a href="/home">Students</a> -->
+                <a href="/student/login">Students</a>
+                <!-- <a href="/employer">Employers</a> -->
+                <a href="/employer/login">Employers</a>
+                
+            </nav>
+            <br><br>
+            </div>
+    <h2>Edit Applied Jobs</h2>
+    <form >
+        <input type="text" id="job_id" name="job_id" placeholder="" value=<%=old_id%> />
+        <!-- <input type="text" id="job_name" name="job_name" placeholder="Enter Job_name"/>
+		<input type="text" id="description" name="description" placeholder="Enter Description"/>
+        <input type="text" id="student_id" name="student_id" placeholder="Enter Student_ID"/>
+		 <input type="text" id="student_name" name="student_name" placeholder="Enter Student_Name"/> -->
+		  <input type="text" id="gpa" name="gpa" placeholder="Update GPA"/>
+		  <input type="text" id="preferred_location" name="preferred location" placeholder="Update Preferred Location"/>
+        <button type="button" id="edit-button">Edit Info</button>
+    </form>
+
+    <a href="/Display1">Back to Home Page</a>
+    </body>
+    <script src="/edit_applied_jobs.js"></script>
+	
+</html>

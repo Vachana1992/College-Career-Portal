@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/main.css"/>
+</head>
+<header class="header">
+<a href="#" class="active"><img src="/image/logo.png"alt="Logo" style="width:11.7% height=11.7%"></a>
+
+<h1>My Career Center</h1><br>
+</header>
+<body>	
+	
+	<div>
+		<nav class="navigation">
+			<a href="/">Home</a>
+			<a href="/admin">Admin</a>
+			<!-- <a href="/home">Students</a> -->
+			<a href="/student/login">Students</a>
+			<!-- <a href="/employer">Employers</a> -->
+			<a href="/employer/login">Employers</a>
+			
+		</nav>
+	<br><br>
+	</div>
+    <div id='login'>
+        <h2 data-position="header">Employer Details</h2>
+        <section data-position="employers">
+            <form>
+            <table>
+                    <tr>
+                        <td>
+                            <strong>Employer Id :   </strong><input type="text" id="employer_id" name="employer_id" value=<%=old_emp_id %> readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Name :   </strong><input type="text" id="name" name="name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Address :       </strong><input type="text" id="address" name="address">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>City :       </strong><input type="text" id="city" name="city">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Province :       </strong><input type="text" id="province" name="province">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Zip Code :       </strong><input type="text" id="zip_code" name="zip_code">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Phone :         </strong><input type="text" id="phone" name="phone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Email :         </strong><input type="text" id="employer_email" name="employer_email">
+                        </td>
+                    </tr>
+            </table>
+            <button type="button" id="edit-button">Update Info</button>
+    
+        </form>
+    </section>
+        <a href="/">Back to Home Page</a>
+    </body>
+    <script src="/edit_employer.js"></script>
+<footer>
+	<nav class="footer">
+		<a href="">Help and Support</a>
+		<a href="faq.html">FAQ's</a>
+		<a href="AboutUs.html">About Us</a>
+	</nav>
+</footer>
+</html>

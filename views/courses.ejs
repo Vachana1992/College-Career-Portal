@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/main.css" />
+</head>
+<header class="header">
+    <a href="#" class="active"><img src="/image/logo.png" alt="Logo" style="width:11.7% height=11.7%"></a>
+
+    <h1>My Career Center</h1><br>
+</header>
+
+<body>
+
+    <div>
+        <nav class="navigation">
+            <a href="/">Home</a>
+            <a href="/admin">Admin</a>
+            <!-- <a href="/home">Students</a> -->
+            <a href="/student/login">Students</a>
+            <!-- <a href="/employer">Employers</a> -->
+            <a href="/employer/login">Employers</a>
+
+        </nav>
+        <br><br>
+    </div>
+    <div id='login'>
+        <h2 data-position="header">Course Details</h2>
+        <section data-position="students">
+            <table>
+                <tr>
+                    <th>Course ID </th>
+                    <th>Program ID </th>
+                    <th>Course Name </th>
+                    <th>Program Name </th>
+                    <th>Term </th>
+                    <th>No of Students </th>
+                    <th>Instructor Name </th>
+
+                </tr>
+                <% for(var i=0;i<mycourses.length;i++){%>
+
+                    <tr>
+
+                        <td><strong>
+                                <%= mycourses[i].course_id %>
+                            </strong> &nbsp;</td>
+                        <td><span>
+                                <%= mycourses[i].program_id %>
+                            </span> &nbsp;</td>
+                        <td><span>
+                                <%= mycourses[i].course_name %>
+                            </span> &nbsp;</td>
+                        <td><span>
+                                <%= mycourses[i].program_name %>
+                            </span> &nbsp;</td>
+                        <td><span>
+                                <%= mycourses[i].term %>
+                            </span> &nbsp;</td>
+                        <td><span>
+                                <%= mycourses[i].no_of_students%>
+                            </span> &nbsp;</td>
+                        <td><span>
+                                <%= mycourses[i].instructor_name%>
+                            </span> &nbsp;</td>
+                        <td><a href='/edit/course?course_id=<%=mycourses[i].course_id%>'> <input type=button
+                                    value='Update'></a></td>
+                        <td>
+                            <form action='/delete/course?id=<%=mycourses[i].course_id %>' method="POST">
+                                <input type="submit" value="Delete"></button>
+                            </form>
+                        </td>
+                    </tr>
+                    <%}%>
+            </table>
+
+
+
+        </section>
+        <a href='/add/course'><button type="submit">Add Course</button></a>
+    </div>
+
+</body>
+<section>
+</section>
+<footer>
+    <nav class="footer">
+        <a href="">Help and Support</a>
+        <a href="faq.html">FAQ's</a>
+        <a href="AboutUs.html">About Us</a>
+    </nav>
+</footer>
+
+</html>

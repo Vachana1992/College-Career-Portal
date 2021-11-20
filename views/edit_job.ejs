@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/main.css" />
+</head>
+<header class="header">
+    <a href="#" class="active"><img src="/image/logo.png" alt="Logo" style="width:11.7% height=11.7%"></a>
+
+    <h1>My Career Center</h1><br>
+</header>
+
+<body>
+    <div>
+        <nav class="navigation">
+            <a href="/">Home</a>
+			<a href="/admin">Admin</a>
+			<!-- <a href="/home">Students</a> -->
+			<a href="/student/login">Students</a>
+			<!-- <a href="/employer">Employers</a> -->
+			<a href="/employer/login">Employers</a>
+
+        </nav>
+        <br><br>
+    </div>
+    <h2 class="h2b">Edit Job </h3>
+        <form>
+            <table id="customers">
+                <tr>
+                    <td> Id:</td>
+                    <td><input type="text" id="s_id" name="s_id" placeholder="Enter id" value=<%=old_id%> </td>
+                </tr>
+                <tr>
+                    <td> Company Name:</td>
+                    <td><input type="text" id="s_comname" name="s_comname" placeholder="Enter company name" /> </td>
+                </tr>
+                <tr>
+                    <td>Title:</td>
+                    <td><input type="text" id="s_title" name="s_title" placeholder="Enter title" /> </td>
+                </tr>
+                <tr>
+                    <td> Application Procedure:</td>
+                    <td><input type="text" id="s_appproc" name="s_appproc" placeholder="Enter application procedure" />
+                    </td>
+                </tr>
+                <tr>
+                    <td> Documents Required:</td>
+                    <td><input type="text" id="s_docreq" name="s_docreq" placeholder="Enter doc required" /> </td>
+                </tr>
+                <tr>
+                    <td> Description:</td>
+                    <td><input type="text" id="s_desc" name="s_desc" placeholder="Enter description" /> </td>
+                </tr>
+                <tr>
+                    <td> Job Type:</td>
+                    <td><input type="text" id="s_type" name="s_type" placeholder="Enter job type" /> </td>
+                </tr>
+                <tr>
+                    <td> Number of position:</td>
+                    <td><input type="text" id="s_position" name="s_position" placeholder="Enter number of position" />
+                    </td>
+                </tr>
+                <tr>
+                    <td> Salary:</td>
+                    <td><input type="text" id="s_salary" name="s_salary" placeholder="Enter salary" /> </td>
+                </tr>
+                <tr>
+                    <td>Targeted Programs:</td>
+                    <td><input type="text" id="s_tarpgm" name="s_tarpgm" placeholder="Enter targeted programs" /> </td>
+                </tr>
+                <tr>
+                    <td>Location:</td>
+                    <td><input type="text" id="s_loc" name="s_loc" placeholder="Enter location" /> </td>
+                </tr>
+            </table>
+            <button class="addbtn" type="button" id="edit_button" name="edit_button">Edit</button>
+        </form>
+</body>
+<script src='/edit_job.js'></script>
+<footer>
+    <nav class="footer">
+        <a href="">Help and Support</a>
+        <a href="faq.html">FAQ's</a>
+        <a href="AboutUs.html">About Us</a>
+    </nav>
+</footer>

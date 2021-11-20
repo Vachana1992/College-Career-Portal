@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/main.css"/>
+</head>
+<header class="header">
+<a href="#" class="active"><img src="/image/logo.png"alt="Logo" style="width:11.7% height=11.7%"></a>
+
+<h1>My Career Center</h1><br>
+</header>
+<body>	
+	
+	<div>
+		<nav class="navigation">
+			<a href="/">Home</a>
+			<a href="/admin">Admin</a>
+			<!-- <a href="/home">Students</a> -->
+			<a href="/student/login">Students</a>
+			<!-- <a href="/employer">Employers</a> -->
+			<a href="/employer/login">Employers</a>
+			
+		</nav>
+	<br><br>
+	</div>
+    <div id='login'>
+        <h2 data-position="header">Course Details</h2>
+        <section data-position="courses">
+            <form>
+            <table>
+                    <tr>
+                        <td>
+                            <strong>Course Id :   </strong><input type="text" id="course_id" name="course_id" value=<%=old_id%> readonly >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Program ID:   </strong><input type="text" id="program_id" name="program_id">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Course Name :    </strong><input type="text" id="course_name" name="course_name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Program Name :       </strong><input type="text" id="program_name" name="program_name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Term :         </strong><input type="text" id="term" name="term">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>No of Students :         </strong><input type="text" id="no_of_students" name="no_of_students">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Instructor Name :         </strong><input type="text" id="instructor_name" name="instructor_name">
+                        </td>
+                    </tr>
+            </table>
+            <button type="button" id="edit-button">Update Info</button>
+    
+        </form>
+    </section>
+        <a href="/">Back to Home Page</a>
+    </body>
+    <script src="/edit_course.js"></script>
+<footer>
+	<nav class="footer">
+		<a href="">Help and Support</a>
+		<a href="faq.html">FAQ's</a>
+		<a href="AboutUs.html">About Us</a>
+	</nav>
+</footer>
+</html>

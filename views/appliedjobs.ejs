@@ -1,0 +1,51 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/main.css"/>
+</head>
+<header class="header">
+    <a href="#" class="active"><img src="/image/logo.png"alt="Logo" style="width:11.7% height=11.7%"></a>
+    
+    <h1>My Career Center</h1><br>
+    </header>
+	<body>
+    <nav class="navigation">
+        <a href="/">Home</a>
+        <a href="/admin">Admin</a>
+        <!-- <a href="/home">Students</a> -->
+        <a href="/student/login">Students</a>
+        <!-- <a href="/employer">Employers</a> -->
+        <a href="/employer/login">Employers</a>
+        
+    </nav>
+    <section data-position="class">
+        <h2 data-position="header">Applied Jobs Details</h2>
+        <table>
+        <tr>
+        <th>Job ID </th>
+        <th>Job_Name</th>
+        <th>Description </th>
+        <th>Student id </th>
+        <th>Student Name </th>
+        <th>GPA</th>
+        <th>Preferred Location </th>
+        </tr>
+        <% for(var i=0;i<appliedjobs.length;i++){%>
+        <tr>
+        <td><strong><%= appliedjobs[i].job_id %></strong> &nbsp;</td>
+        <td><span><%= appliedjobs[i].job_name %></span> &nbsp;</td>
+        <td><span><%= appliedjobs[i].description %></span>  &nbsp;</td>
+        <td><span><%= appliedjobs[i].student_id %></span>  &nbsp;</td>
+        <td><span><%= appliedjobs[i].student_name %></span>  &nbsp;</td>
+        <td><span><%= appliedjobs[i].gpa %></span> &nbsp;</td>
+        <td><span><%= appliedjobs[i].preferred_location %></span>  &nbsp;</td>
+        <td><a href="/edit/appliedjobs?id=<%= appliedjobs[i].job_id %>"> <input type='button' value='Modify'></a></td>
+        <td><form action="/delete/appliedjobs?id=<%= appliedjobs[i].job_id %>" method="POST"><input type="submit" id="Del" value="Delete"></form></td>
+        </tr>
+        <%}%>
+        </table>
+        </section>
+	
+    </body>
+	
+	
+</html>

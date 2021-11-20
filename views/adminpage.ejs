@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/main.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<header class="header">
+<a href="#" class="active"><img src="/image/logo.png"alt="Logo" style="width:11.7% height=11.7%"></a>
+
+<h1>My Career Center</h1><br>
+</header>
+<body>	
+	
+	<div>
+	<nav class="navigation">
+    <a href="/">Home</a>
+			<a href="/admin">Admin</a>
+			<!-- <a href="/home">Students</a> -->
+			<a href="/student/login">Students</a>
+			<!-- <a href="/employer">Employers</a> -->
+			<a href="/employer/login">Employers</a>
+        
+        <div class="dropdown">
+            <div id="nam">
+            <button class="dropbtn" onclick="myFunction()">
+                Hi&nbsp;<span><%=admins.name%></span>
+                <i class="fa fa-caret-down"></i>
+            </button></nav>
+            <div class="dropdown-content" id="myDropdown">
+             
+             
+              <a href="/get/home">Sign out</a>
+            </div>
+            </div> </div>
+	
+    
+	<br><br>
+	</div>
+    <div >
+        <table>          
+           
+               
+            <tr><td>Admin Id: </td><td><strong><%=admins.id%></strong></td></tr>
+            <tr><td>Name:</td><td><span><%=admins.name%></span>&nbsp;</td></tr>
+            <tr><td>Email: </td><td><span><%=admins.email%></span>&nbsp;</td></tr>
+            <tr><td>Phone: </td><td><span><%=admins.phone%></span>&nbsp;</td> </tr>
+            <tr><td>User Name: </td> <td><span><%=admins.username%></span></td> </tr>
+            <tr><td>Password:</td> <td><span><%=admins.password%></span></td> </tr>
+                   
+                    <td><button type="submit" ><a href='/edit/admin?id=<%=admins.id%>'>Edit</button></a></td>                 
+                </tr>
+               
+        </table>
+    </div>	
+<div id="imb">
+   <img class="imge1" src="/image/students.jpg"alt="Logo" style="width:5.7% height=5.7%">&nbsp;
+ 
+   <img class="imge2"src="/image/employer.jpg"alt="Logo" style="width:5.7% height=5.7%">
+   <img class="imge3" src="/image/courses.jpg"alt="Logo" style="width:5.7% height=5.7%">
+   <img class="imge4" src="/image/jobs.jpg"alt="Logo" style="width:5.7% height=5.7%">
+   </div>
+   
+   <button class="btn1" type="submit" ><a href='/getstudents'>Students</button></a>
+   
+   <button class="btn2" type="submit" ><a href='/getemployers'>Employers</button></a> 
+   
+    <button class="btn3" type="submit" ><a href='/getcourses'>Courses</button></a> 
+   
+      <button class="btn4" type="submit" ><a href='/getjobs'>Jobs</button></a> 
+     
+</body>
+<section>
+</section>
+<footer>
+	<nav class="footer">
+		<a href="">Help and Support</a>
+		<a href="faq.html">FAQ's</a>
+		<a href="AboutUs.html">About Us</a>
+	</nav>
+</footer>
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+    </script>
+</html>
